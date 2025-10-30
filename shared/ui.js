@@ -1,7 +1,6 @@
 import logo from '../public/logo.svg';
 import Image from 'next/image';
 
-
 export const Logo = () =>{
     return(
         <div>
@@ -10,20 +9,24 @@ export const Logo = () =>{
     )
 }
 
-export const Title = ({children}) =>{
-    return <span className='font-bold font-[Inter]'>{children}</span>
+export const Link = ({children, link}) => {
+    return <a href={link} className="font-[Inter] font-semibold text-[24px] transition duration-300 text-white hover:text-[#51BA55] hover:underline ease-in-out ">{children}</a>
 }
 
-export const Artist = ({children}) =>{
-    return <span className='font-[Inter]'>{children}</span>
-}
+export const Title = ({ children }) => {
+  return (
+    <h1 className="font-[Inter] text-[#C0C0C0] text-[64px]">
+      {children}
+    </h1>
+  );
+};
 
-export const Duration = ({children}) =>{
-    return <span className='font-[Inter]'>{children}</span>
-}
-
-export const Cover = ({src}) =>{
-    return(
-        <Image src={src} alt='cover' height={47} width={47} className='h-[47px] w-[47px] rounded-md'/>
-    )
-}
+export const Button = ({ children, func }) => {
+  return (
+    <div className="bg-[#181818] px-[20px] py-1 w-fit rounded-full transition duration-700 ease-in-out hover:bg-[#51BA55] hover:border-[#51BA55]" onClick={func}>
+        <button className="cursor-pointer">
+          <p className="text-[#51BA55] hover:text-[#181818] text-sm font-[Inter] font-semibold">{children}</p>
+        </button>
+    </div>
+  );
+};
