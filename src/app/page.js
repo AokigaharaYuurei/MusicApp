@@ -2,6 +2,7 @@ import { Logo } from "../../shared/ui";
 import { Header } from "../../widgets/header";
 import { Footer } from "../../widgets/footer";
 import { Search } from "../../widgets/search";
+import { Song } from "../../widgets/song";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <div className="flex justify-center items-center mx-60">
         <Search/>
       </div>
+      <Song/>
       <Footer />
     </div>
   );
