@@ -8,10 +8,10 @@ export default function Home() {
   return (
     <div className="bg-[#B4B4B4]">
       <Header />
-      <div className="flex justify-center items-center mx-60">
+      <div className="flex justify-center items-center mx-60 flex-col">
         <Search/>
+        <Song/>
       </div>
-      <Song/>
       <Footer />
     </div>
   );
